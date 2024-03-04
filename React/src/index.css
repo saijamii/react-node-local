@@ -1,0 +1,88 @@
+.body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #161616;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.result {
+  margin: 10px;
+  border-radius: 20px;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+}
+.yellow {
+  margin: 5px;
+  border-radius: 23px;
+  background-color: rgb(255, 232, 101);
+  width: 70%; 
+  height:30%;
+}
+.cart {
+  font-size: 15px;
+  background-color: rgb(149, 225, 106);
+  margin: 10px;
+  border-radius: 15px;
+  min-height: 10rem;
+  width: 70%;
+  height:130%;
+}
+.box {
+  margin: 10px;
+  border-radius: 15px;
+  margin-left: 10px;
+  padding: 2px;
+}
+.btn {
+  margin: 5%;
+  padding: 10px 50px;
+
+  background-color: #00ee2c;
+  border-radius: 70px;
+}
+.logo {
+  display: inline-block;
+  height: 5px;
+  line-height: 250px;
+  font-size: 22px;
+  font-weight: bold;
+  min-height: 10rem;
+}
+.images {
+  
+  position: relative;
+  top: 10;
+  left: 355px;
+  left: 384px;
+  width: 183px;
+  width: 161px;
+  height: 144px;
+  bottom: -541px;
+  bottom: -535px;
+  bottom: -682px;
+}
+.header {
+  position: relative;
+  top: 97px;
+  left: 7px;
+  width: 1007px;
+  right: 600px;
+  height: 419px;
+  height: 324px;
+  bottom: -476px;
+  width: 50%;
+  border-radius: 53px;
+}
+.site-page-header{
+  padding: 35px;
+  background-color: #c22525;
+  color: #00ee2c;
+}

@@ -150,5 +150,5 @@ app.put("/forms/:id", async (req, res) => {
 // })
 
 app.listen(PORT, () => {
-  console.log(`Serer started and Running @ ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
 });

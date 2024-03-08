@@ -101,35 +101,57 @@ app.get("/forms", async (req, res) => {
   }
 });
 
-app.put("/forms/:id", async (req, res) => {
-  const { id } = req.params;
-  const {
-    firstName,
-    lastName,
-    email,
-    gender,
-    designation,
-    phone,
-    dob,
-    comments,
-  } = req.body;
+// app.put("/forms/:id", async (req, res) => {
+//   const { id } = req.params;
+//   const {
+//     firstName,
+//     lastName,
+//     email,
+//     gender,
+//     designation,
+//     phone,
+//     dob,
+//     comments,
+//   } = req.body;
 
+//   try {
+//     const updatedForm = await Form.findByIdAndUpdate(
+//       id,
+//       { firstName, lastName, email, gender, designation, phone, dob, comments },
+//       { new: true } // To return the updated document
+//     );
+
+//     if (!updatedForm) {
+//       return res.status(404).json({ error: "Form not found" });
+//     }
+
+//     res.json(updatedForm);
+//   } catch (error) {
+//     res.status(500).json({ error: error.message });
+//   }
+// });
+
+app.put("/forms/:id",async(req,res) => {
+  const id = req.params.id;
+  const form = new Form(req.body);
+ 
   try {
-    const updatedForm = await Form.findByIdAndUpdate(
-      id,
-      { firstName, lastName, email, gender, designation, phone, dob, comments },
-      { new: true } // To return the updated document
+    // let myCollection = db.collection("mySession");
+    const updateResult = await Form.updateOne(
+      { _id: id },
+      { $set: form }
     );
+    console.log(updateResult)
 
-    if (!updatedForm) {
-      return res.status(404).json({ error: "Form not found" });
+    if (updateResult.modifiedCount > 0) {
+      res.json({ success: true, message: " Updated Successfully" });
+    } else {
+      res.status(404).json({ success: false, message: "Data unchanged" });
     }
-
-    res.json(updatedForm);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(500).json({ success: false, message: "Internal Server Error: " + error.message });
   }
-});
+})
 
 // app.post('/register', async (req, res) => {
 //   const { username, email, password } = req.body;

@@ -41,10 +41,10 @@ mongoose
     console.log(`${error}`);
   });
 
-const store = new MongoDBStore({
-  uri: process.env.MONGO_URI,
-  collection: "mySession",
-});
+// const store = new MongoDBStore({
+//   uri: process.env.MONGO_URI,
+//   collection: "mySession",
+// });
 
 app.get("/signup", (req, res) => {
   res.render("register");

@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import { DualAxes } from "@ant-design/plots";
 import { Area } from "@ant-design/plots";
-import { Col, Row, Button, Card } from "antd";
-import { Link } from "react-router-dom";
+import { Col, Row, Card } from "antd";
 import { Gauge } from "@ant-design/plots";
 import { Liquid } from "@ant-design/plots";
 import { RingProgress } from "@ant-design/plots";
@@ -235,7 +233,7 @@ export default function Dashboard(props) {
   };
 
   return (
-    <Col span={24} style={{marginTop:"80px"}}>
+    <Col span={24} style={{ marginTop: "80px" }}>
       <h1>Monitor Dashboard</h1>
       <Col span={24}>
         <Row gutter={[6, 6]}>

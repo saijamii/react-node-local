@@ -11,11 +11,8 @@ import {
   Card,
 } from "antd";
 
-
-const { TextArea } = Input;
-
 export default function Form1() {
-  const [dob, setDob] = useState("");
+  const [dob] = useState("");
   const onResetValues = () => {
     document.getElementById("myForm").reset();
   };
@@ -151,7 +148,7 @@ export default function Form1() {
                       ]}
                     >
                       <TreeSelect
-                       style={{ width: '491px',right: '104px' }}
+                        style={{ width: "491px", right: "104px" }}
                         treeData={[
                           {
                             title: "Front-End Developer",
@@ -202,7 +199,7 @@ export default function Form1() {
                     <Form.Item
                       name="comments"
                       label="Comments"
-                      labelCol={{ style: { marginRight: '99px' } }}
+                      labelCol={{ style: { marginRight: "99px" } }}
                       rules={[
                         {
                           required: true,
@@ -210,10 +207,11 @@ export default function Form1() {
                         },
                       ]}
                     >
-                      <Input.TextArea 
-                       style={{ width: '498px', right: '104px' }}
-                      
-                      rows={4} placeholder="Comments" />
+                      <Input.TextArea
+                        style={{ width: "498px", right: "104px" }}
+                        rows={4}
+                        placeholder="Comments"
+                      />
                     </Form.Item>
                   </Col>
                 </Row>

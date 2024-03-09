@@ -9,7 +9,6 @@ import {
 
 export default function UsersTable(props) {
   const [users, setUsers] = useState([]);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     getUsersData();
@@ -168,7 +167,7 @@ export default function UsersTable(props) {
                   style={{ marginTop: "25px" }}
                   placeholder="Search..."
                   onChange={(e) => {
-                    setSearch(e.target.value);
+                    // setSearch(e.target.value);
                   }}
                 />
               </Col>

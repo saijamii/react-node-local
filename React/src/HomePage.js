@@ -1,11 +1,9 @@
 import React from "react";
 
-import { Card, Col, Table, Row, Tabs, Avatar, Space } from "antd";
+import { Card, Col, Avatar, Space } from "antd";
 import Carousel from "react-elastic-carousel";
-import Headers from "./Headers";
-import unosimple from "./Images/unosimple.png";
 import { UserOutlined } from "@ant-design/icons";
-export default function HomePage(props) {
+export default function HomePage() {
   const data = [
     {
       name: "Mike",
@@ -50,7 +48,7 @@ export default function HomePage(props) {
   ];
 
   return (
-    <div style={{marginTop:"80px"}}>
+    <div style={{ marginTop: "80px" }}>
       <Col span={24}>
         {/* <img src={unosimple} style={{ width: "30%", height: "40%" }} /> */}
         {/* <h1>HomePage</h1> */}
@@ -77,7 +75,7 @@ export default function HomePage(props) {
         >
           {data.map((e) => (
             <Card hoverable>
-              <div style={{ textAlign: "center",height:"20vh"}}>
+              <div style={{ textAlign: "center", height: "20vh" }}>
                 <Space wrap size={16}>
                   <Avatar size={64} icon={<UserOutlined />} />
                 </Space>

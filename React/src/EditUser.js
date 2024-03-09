@@ -12,6 +12,7 @@ export default function EditUser(props) {
   const { id } = useParams();
   console.log(id, "id");
   const [user, setUser] = useState([]);
+  console.log(user,"user");
   const [dob, setDob] = useState("");
 
   // const updateUserById = (id, data) => {

@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Table, Popover, Row, Col, Button, Popconfirm, Input } from "antd";
-import {
-  EllipsisOutlined,
-  DeleteOutlined,
-  PlusOutlined,
-} from "@ant-design/icons";
-import Headers from "./Headers";
-import { Link } from "react-router-dom";
+import { Table, Row, Col, Input } from "antd";
 
-export default function DemoEmployeeData(props) {
+export default function DemoEmployeeData() {
   const [users, setUsers] = useState([]);
   console.log(users, "users");
   const [search, setSearch] = useState("");
@@ -99,7 +92,6 @@ export default function DemoEmployeeData(props) {
     },
   ];
 
-
   // const colums = [
   //   {
   //     title: "Year",
@@ -137,9 +129,8 @@ export default function DemoEmployeeData(props) {
   //     title: "Value",
   //     dataIndex: "Value",
   //   },
-    
+
   // ];
-  
 
   return (
     <div style={{ marginTop: "80px" }}>

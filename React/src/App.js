@@ -15,9 +15,9 @@ import DemoEmployeeData from "./DemoEmployeeData";
 
 const { Header } = Layout;
 
-const App = (props) => {
-  console.log(props, "props");
-
+const App = () => {
+  const appVersion = "v09.03.24.02";
+  console.log(appVersion, "appVersion");
   return (
     <div style={{ height: "100vh", overflowX: "hidden" }}>
       <>
